@@ -3,11 +3,11 @@
 ## Архитектура
 
 ### Структура:
-* app &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ↓
-* pages &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ↓
-* modules &emsp;&emsp;&emsp;&emsp;&emsp; ↓
-* components ↓
-* shared &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;↓
+* ↓ app
+* ↓ pages 
+* ↓ modules
+* ↓ components
+* ↓ shared
 
 ### Правила:
 * Отдельные части приложения могут использовать только нижележащие части приложение
