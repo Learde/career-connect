@@ -23,5 +23,6 @@
 
 .logoWrapper span {
   font-size: 16px;
+  font-weight: 300;
 }
 </style>
