@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@iconify-prerendered/vue-fluent-emoji": "^0.22.1679295011",
-    "@iconify-prerendered/vue-ic": "^0.22.1672653513",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
     "lodash": "^4.17.21",
@@ -19,6 +18,7 @@
     "naive-ui": "^2.34.4",
     "pinia": "^2.0.36",
     "vue": "^3.3.2",
+    "vue-material-design-icons": "^5.2.0",
     "vue-router": "^4.2.0",
     "vue-tippy": "^6.2.0"
   },
