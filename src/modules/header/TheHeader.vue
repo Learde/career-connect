@@ -17,6 +17,8 @@ import { BaseLogo } from "@/components";
   align-items: center;
   justify-content: center;
   height: var(--header-height);
+  position: relative;
+  z-index: var(--z-header);
 }
 
 .headerContent {
