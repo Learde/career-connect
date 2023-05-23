@@ -13,11 +13,11 @@
 .logoWrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 6px;
 }
 
 .logoWrapper img {
-  width: 240px;
+  width: 200px;
   height: auto;
 }
 
