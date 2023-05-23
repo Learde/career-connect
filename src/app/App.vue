@@ -1,6 +1,6 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import { TheHeader } from "@/modules";
+import { TheHeader, TheMain } from "@/modules";
 import { NConfigProvider } from "naive-ui";
 
 import { naiveConfig } from "./naiveConfig";
@@ -9,15 +9,8 @@ import { naiveConfig } from "./naiveConfig";
 <template>
   <NConfigProvider :theme-overrides="naiveConfig">
     <TheHeader />
-    <main :class="classes.main">
+    <TheMain>
         <RouterView />
-    </main>
+    </TheMain>
   </NConfigProvider>
 </template>
-
-<style module="classes">
-.main {
-  background-color: var(--c-background);
-  min-height: calc(100vh - var(--header-height));
-}
-</style>
