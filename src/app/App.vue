@@ -9,12 +9,15 @@ import { naiveConfig } from "./naiveConfig";
 <template>
   <NConfigProvider :theme-overrides="naiveConfig">
     <TheHeader />
-    <main>
+    <main :class="classes.main">
         <RouterView />
     </main>
   </NConfigProvider>
 </template>
 
-<style scoped>
-
+<style module="classes">
+.main {
+  background-color: var(--c-background);
+  min-height: calc(100vh - var(--header-height));
+}
 </style>
