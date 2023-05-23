@@ -5,33 +5,63 @@ import { GlowingIcon } from "@/components";
 </script>
 
 <template>
-  <GlowingIcon background-color="rgba(125, 78, 89, 0.5)" rotate-z="12deg">
+  <GlowingIcon :class="[classes.mainIcon, classes.mainIcon1]" background-color="rgb(125, 78, 89)" rotate-z="12deg">
     <IconBriefcase />
   </GlowingIcon>
 
-  <GlowingIcon background-color="rgba(69, 163, 236, 1)" rotate-z="-28deg">
+  <GlowingIcon :class="[classes.mainIcon, classes.mainIcon2]" background-color="rgb(69, 163, 236)" rotate-z="-28deg">
     <IconBarChart />
   </GlowingIcon>
 
-  <GlowingIcon background-color="rgba(232, 167, 115, 1)" rotate-z="20deg">
+  <GlowingIcon :class="[classes.mainIcon, classes.mainIcon3]" background-color="rgb(232, 167, 115)" rotate-z="20deg">
     <IconClipboard />
   </GlowingIcon>
 
-  <GlowingIcon background-color="rgba(223, 67, 119, 1)" rotate-z="-50deg">
+  <GlowingIcon :class="[classes.mainIcon, classes.mainIcon4]" background-color="rgb(223, 67, 119)" rotate-z="-40deg">
     <IconBookmarkTabs />
   </GlowingIcon>
 
-  <GlowingIcon background-color="rgba(130, 218, 127, 1)" rotate-z="-50deg">
+  <GlowingIcon :class="[classes.mainIcon, classes.mainIcon5]" background-color="rgb(130, 218, 127)" rotate-z="-40deg">
     <IconBooks />
   </GlowingIcon>
 
-  <GlowingIcon background-color="rgba(89, 232, 255, 1)" rotate-z="20deg">
+  <GlowingIcon :class="[classes.mainIcon, classes.mainIcon6]" background-color="rgb(89, 232, 255)" rotate-z="20deg">
     <IconLaptop />
   </GlowingIcon>
 </template>
 
-<style scoped>
-p {
-  color: #E8A773;
+<style module="classes">
+.mainIcon {
+  position: absolute;
+}
+
+.mainIcon1 {
+  top: 6%;
+  left: -1%;
+}
+
+.mainIcon2 {
+  top: 45%;
+  left: 4%;
+}
+
+.mainIcon3 {
+  top: calc(100% - 85px);
+  left: 0;
+}
+
+.mainIcon4 {
+  top: 11%;
+  right: 4%;
+}
+
+.mainIcon5 {
+  top: 44%;
+  right: -3.8%;
+}
+
+.mainIcon6 {
+  top: calc(100% - 90px);
+  right: 3.8%;
 }
 </style>
