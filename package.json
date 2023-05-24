@@ -2,6 +2,9 @@
   "name": "career-connect",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@iconify-prerendered/vue-fluent-emoji": "^0.22.1679295011",
+    "@iconify-prerendered/vue-fluent-emoji": "^0.22.1676715458",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
     "lodash": "^4.17.21",

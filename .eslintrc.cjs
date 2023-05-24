@@ -166,33 +166,19 @@ module.exports = {
                 rules: [
                     {
                         from: "app",
-                        allow: [
-                            "pages",
-                            "modules",
-                            "components",
-                            "shared",
-                        ],
+                        allow: ["pages", "modules", "components", "shared"],
                     },
                     {
                         from: "pages",
-                        allow: [
-                            "modules",
-                            "components",
-                            "shared",
-                        ],
+                        allow: ["modules", "components", "shared"],
                     },
                     {
                         from: "modules",
-                        allow: [
-                            "components",
-                            "shared",
-                        ],
+                        allow: ["components", "shared"],
                     },
                     {
                         from: "components",
-                        allow: [
-                            "shared",
-                        ],
+                        allow: ["shared"],
                     },
                     { from: "shared", allow: ["shared"] },
                 ],

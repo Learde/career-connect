@@ -1,4 +1,3 @@
-export { calculateElementPosition } from "./calculateElementPosition";
 export * from "./types";
 export { getRandomInt } from "./number";
 export { pSBC } from "./color";
