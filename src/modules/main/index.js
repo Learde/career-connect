@@ -1,1 +1,1 @@
-export { default as TheMain } from "./TheMain.vue";
+export { default as TheMainAdmin } from "./TheMainAdmin.vue";

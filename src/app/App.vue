@@ -2,7 +2,7 @@
 import { NConfigProvider } from "naive-ui";
 import { RouterView } from "vue-router";
 
-import { TheHeader, TheMain } from "@/modules";
+import { TheHeader, TheMainAdmin } from "@/modules";
 
 import { naiveConfig } from "./naiveConfig";
 </script>
@@ -10,8 +10,8 @@ import { naiveConfig } from "./naiveConfig";
 <template>
     <NConfigProvider :theme-overrides="naiveConfig">
         <TheHeader />
-        <TheMain>
+        <TheMainAdmin>
             <RouterView />
-        </TheMain>
+        </TheMainAdmin>
     </NConfigProvider>
 </template>
