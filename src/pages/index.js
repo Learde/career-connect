@@ -1,3 +1,4 @@
+import { adminRoutes } from "./admin";
 import { welcomeRoutes } from "./welcome";
 
-export const routes = [...welcomeRoutes];
+export const routes = [...welcomeRoutes, ...adminRoutes];

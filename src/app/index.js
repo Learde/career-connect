@@ -1,3 +1,4 @@
+import naive from "naive-ui";
 import { createPinia } from "pinia";
 import { createApp } from "vue";
 
@@ -10,5 +11,6 @@ const app = createApp(App);
 
 app.use(createPinia());
 app.use(router);
+app.use(naive);
 
 export default app;
