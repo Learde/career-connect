@@ -12,17 +12,21 @@ import { BaseLogo } from "@/components";
 
 <style module="classes">
 .header {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--header-height);
     position: relative;
     z-index: var(--z-header);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: var(--header-height);
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 15%);
 }
 
 .headerContent {
-    max-width: var(--container-width);
     width: 100%;
+    max-width: var(--container-width);
 }
 </style>

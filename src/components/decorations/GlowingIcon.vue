@@ -15,29 +15,37 @@ defineProps({
 <style lang="scss" module="classes">
 .glowingIcon {
     position: relative;
+
     display: flex;
-    justify-content: center;
+
     align-items: center;
+    justify-content: center;
+
     width: 100px;
     height: 100px;
+
     transform: rotateZ(v-bind(rotateZ));
 
     & svg,
     & img {
+        position: relative;
+
+        flex-shrink: 0;
+
         min-width: 100%;
         min-height: 100%;
-        flex-shrink: 0;
-        position: relative;
     }
 }
 
 .glowingIconBackground {
-    background-color: v-bind(backgroundColor);
+    position: absolute;
+    right: 0;
+    left: 0;
+
     width: 100%;
     height: 100%;
+
+    background-color: v-bind(backgroundColor);
     filter: blur(40px);
-    position: absolute;
-    left: 0;
-    right: 0;
 }
 </style>

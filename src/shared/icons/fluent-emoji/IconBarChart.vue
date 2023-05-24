@@ -1,8 +1,8 @@
 <template>
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="1em"
-        height="1em"
+        width="32"
+        height="32"
         viewBox="0 0 32 32"
     >
         <g fill="none">
@@ -14,7 +14,7 @@
                     y="2.055"
                     fill="url(#f101id0)"
                     rx="3.8"
-                ></rect>
+                />
             </g>
             <rect
                 width="27.906"
@@ -23,7 +23,7 @@
                 y="2.055"
                 fill="url(#f101id1)"
                 rx="3.8"
-            ></rect>
+            />
             <rect
                 width="27.906"
                 height="27.906"
@@ -31,7 +31,7 @@
                 y="2.055"
                 fill="url(#f101idu)"
                 rx="3.8"
-            ></rect>
+            />
             <rect
                 width="27.906"
                 height="27.906"
@@ -39,77 +39,77 @@
                 y="2.055"
                 fill="url(#f101idv)"
                 rx="3.8"
-            ></rect>
+            />
             <g filter="url(#f101idl)">
                 <path
                     fill="url(#f101id2)"
                     d="M27.26 28.78a3.91 3.91 0 0 1-1.771.418h-3.984V8.134c0-.603.525-1.091 1.172-1.091h3.411c.647 0 1.171.488 1.171 1.09V28.78Z"
-                ></path>
+                />
             </g>
             <path
                 fill="url(#f101id3)"
-                fillRule="evenodd"
+                fill-rule="evenodd"
                 d="M11.523 2.055h-1v8.39H2.047v1h8.476v8.97H2.047v1h8.476v8.546h1v-8.547h9v8.547h1v-8.547h8.43v-1h-8.43v-8.969h8.43v-1h-8.43v-8.39h-1v8.39h-9v-8.39Zm9 9.39v8.97h-9v-8.97h9Z"
-                clipRule="evenodd"
-            ></path>
+                clip-rule="evenodd"
+            />
             <path
                 fill="url(#f101id4)"
-                fillRule="evenodd"
+                fill-rule="evenodd"
                 d="M11.523 2.055h-1v8.39H2.047v1h8.476v8.97H2.047v1h8.476v8.546h1v-8.547h9v8.547h1v-8.547h8.43v-1h-8.43v-8.969h8.43v-1h-8.43v-8.39h-1v8.39h-9v-8.39Zm9 9.39v8.97h-9v-8.97h9Z"
-                clipRule="evenodd"
-            ></path>
+                clip-rule="evenodd"
+            />
             <path
                 fill="url(#f101id5)"
-                fillRule="evenodd"
+                fill-rule="evenodd"
                 d="M11.523 2.055h-1v8.39H2.047v1h8.476v8.97H2.047v1h8.476v8.546h1v-8.547h9v8.547h1v-8.547h8.43v-1h-8.43v-8.969h8.43v-1h-8.43v-8.39h-1v8.39h-9v-8.39Zm9 9.39v8.97h-9v-8.97h9Z"
-                clipRule="evenodd"
-            ></path>
+                clip-rule="evenodd"
+            />
             <path
                 fill="url(#f101id6)"
-                fillRule="evenodd"
+                fill-rule="evenodd"
                 d="M11.523 2.055h-1v8.39H2.047v1h8.476v8.97H2.047v1h8.476v8.546h1v-8.547h9v8.547h1v-8.547h8.43v-1h-8.43v-8.969h8.43v-1h-8.43v-8.39h-1v8.39h-9v-8.39Zm9 9.39v8.97h-9v-8.97h9Z"
-                clipRule="evenodd"
-            ></path>
+                clip-rule="evenodd"
+            />
             <path
                 fill="url(#f101id7)"
-                fillRule="evenodd"
+                fill-rule="evenodd"
                 d="M11.523 2.055h-1v8.39H2.047v1h8.476v8.97H2.047v1h8.476v8.546h1v-8.547h9v8.547h1v-8.547h1.972v-1h-1.972v-8.969h1.972v-1h-1.972v-8.39h-1v8.39h-9v-8.39Zm9 9.39v8.97h-9v-8.97h9Z"
-                clipRule="evenodd"
-            ></path>
+                clip-rule="evenodd"
+            />
             <path
                 fill="url(#f101id8)"
-                fillRule="evenodd"
+                fill-rule="evenodd"
                 d="M11.523 2.055h-1v8.39H2.047v1h8.476v8.97H2.047v1h8.476v8.546h1v-8.547h9v8.547h1v-8.547h1.972v-1h-1.972v-8.969h1.972v-1h-1.972v-8.39h-1v8.39h-9v-8.39Zm9 9.39v8.97h-9v-8.97h9Z"
-                clipRule="evenodd"
-            ></path>
+                clip-rule="evenodd"
+            />
             <path
                 fill="url(#f101id9)"
-                fillRule="evenodd"
+                fill-rule="evenodd"
                 d="M11.523 2.055h-1v8.39H2.047v1h8.476v8.97H2.047v1h8.476v8.546h1v-8.547h9v8.547h1v-8.547h1.972v-1h-1.972v-8.969h1.972v-1h-1.972v-8.39h-1v8.39h-9v-8.39Zm9 9.39v8.97h-9v-8.97h9Z"
-                clipRule="evenodd"
-            ></path>
+                clip-rule="evenodd"
+            />
             <g filter="url(#f101idm)">
                 <path
                     fill="url(#f101ida)"
                     d="M18.24 29.387a6.45 6.45 0 0 1-1.772.238h-3.983V17.656c0-.342.524-.62 1.171-.62h3.412c.647 0 1.171.278 1.171.62v11.731Z"
-                ></path>
+                />
             </g>
             <g filter="url(#f101idn)">
                 <path
                     fill="url(#f101idb)"
                     d="M9.11 28.437a4.374 4.374 0 0 1-1.77.366H3.357V10.382c0-.527.524-.954 1.171-.954H7.94c.647 0 1.172.427 1.172.954v18.055Z"
-                ></path>
+                />
             </g>
             <g filter="url(#f101ido)">
                 <path
                     fill="url(#f101idc)"
                     d="M27.967 29.5a3.777 3.777 0 0 1-1.814.461h-4.08V6.794a1.2 1.2 0 0 1 1.2-1.2h3.494a1.2 1.2 0 0 1 1.2 1.2V29.5Z"
-                ></path>
+                />
             </g>
             <path
                 fill="url(#f101idd)"
                 d="M27.967 29.5a3.777 3.777 0 0 1-1.814.461h-4.08V6.794a1.2 1.2 0 0 1 1.2-1.2h3.494a1.2 1.2 0 0 1 1.2 1.2V29.5Z"
-            ></path>
+            />
             <g filter="url(#f101idp)">
                 <rect
                     width=".865"
@@ -118,21 +118,21 @@
                     y="6.527"
                     fill="url(#f101ide)"
                     rx=".433"
-                ></rect>
+                />
             </g>
             <path
                 fill="url(#f101idw)"
                 d="M13.459 10.445h-1.936v-8.39h-1v8.39H2.047v1h8.476v8.97H2.047v1h8.476v8.546h1v-8.547h1.936v-1h-1.936v-8.969h1.936v-1Z"
-            ></path>
+            />
             <path
                 fill="url(#f101idf)"
                 d="M13.459 10.445h-1.936v-8.39h-1v8.39H2.047v1h8.476v8.97H2.047v1h8.476v8.546h1v-8.547h1.936v-1h-1.936v-8.969h1.936v-1Z"
-            ></path>
+            />
             <g filter="url(#f101idq)">
                 <path
                     fill="url(#f101idg)"
                     d="M18.947 29.961h-5.894V17.847a1.2 1.2 0 0 1 1.2-1.2h3.494a1.2 1.2 0 0 1 1.2 1.2V29.96Z"
-                ></path>
+                />
             </g>
             <g filter="url(#f101idr)">
                 <rect
@@ -142,13 +142,13 @@
                     y="17.555"
                     fill="url(#f101idh)"
                     rx=".433"
-                ></rect>
+                />
             </g>
             <g filter="url(#f101ids)">
                 <path
                     fill="url(#f101idi)"
                     d="M9.927 29.96h-4.08a3.782 3.782 0 0 1-1.814-.46V9.866a1.2 1.2 0 0 1 1.2-1.2h3.494a1.2 1.2 0 0 1 1.2 1.2v20.096Z"
-                ></path>
+                />
             </g>
             <g filter="url(#f101idt)">
                 <rect
@@ -158,7 +158,7 @@
                     y="9.428"
                     fill="url(#f101idj)"
                     rx=".433"
-                ></rect>
+                />
             </g>
             <defs>
                 <linearGradient
@@ -169,8 +169,8 @@
                     y2="23.32"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#D8D1E0"></stop>
-                    <stop offset="1" stopColor="#D5C9E3"></stop>
+                    <stop stop-color="#D8D1E0" />
+                    <stop offset="1" stop-color="#D5C9E3" />
                 </linearGradient>
                 <linearGradient
                     id="f101id1"
@@ -180,8 +180,8 @@
                     y2="27.926"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#A88AC4"></stop>
-                    <stop offset="1" stopColor="#CDBCE0" stopOpacity="0"></stop>
+                    <stop stop-color="#A88AC4" />
+                    <stop offset="1" stop-color="#CDBCE0" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="f101id2"
@@ -191,8 +191,8 @@
                     y2="29.198"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#9B98B3"></stop>
-                    <stop offset="1" stopColor="#9C83AE"></stop>
+                    <stop stop-color="#9B98B3" />
+                    <stop offset="1" stop-color="#9C83AE" />
                 </linearGradient>
                 <linearGradient
                     id="f101id3"
@@ -202,8 +202,8 @@
                     y2="29.961"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#C2BEC6"></stop>
-                    <stop offset="1" stopColor="#BAACC6"></stop>
+                    <stop stop-color="#C2BEC6" />
+                    <stop offset="1" stop-color="#BAACC6" />
                 </linearGradient>
                 <linearGradient
                     id="f101id4"
@@ -213,8 +213,8 @@
                     y2="27.195"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#9E83B7"></stop>
-                    <stop offset="1" stopColor="#9E83B7" stopOpacity="0"></stop>
+                    <stop stop-color="#9E83B7" />
+                    <stop offset="1" stop-color="#9E83B7" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="f101id5"
@@ -224,8 +224,8 @@
                     y2="17.367"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#96909C"></stop>
-                    <stop offset="1" stopColor="#96909C" stopOpacity="0"></stop>
+                    <stop stop-color="#96909C" />
+                    <stop offset="1" stop-color="#96909C" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="f101id6"
@@ -235,8 +235,8 @@
                     y2="18.055"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#D6D1DA"></stop>
-                    <stop offset="1" stopColor="#D6D1DA" stopOpacity="0"></stop>
+                    <stop stop-color="#D6D1DA" />
+                    <stop offset="1" stop-color="#D6D1DA" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="f101id7"
@@ -246,8 +246,8 @@
                     y2="18.334"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset=".452" stopColor="#7C7695"></stop>
-                    <stop offset="1" stopColor="#7C7695" stopOpacity="0"></stop>
+                    <stop offset=".452" stop-color="#7C7695" />
+                    <stop offset="1" stop-color="#7C7695" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="f101id8"
@@ -257,8 +257,8 @@
                     y2="28.371"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#9070AD"></stop>
-                    <stop offset="1" stopColor="#9070AD" stopOpacity="0"></stop>
+                    <stop stop-color="#9070AD" />
+                    <stop offset="1" stop-color="#9070AD" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="f101id9"
@@ -268,8 +268,8 @@
                     y2="10.158"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset=".668" stopColor="#C3BFC7"></stop>
-                    <stop offset="1" stopColor="#C3BFC7" stopOpacity="0"></stop>
+                    <stop offset=".668" stop-color="#C3BFC7" />
+                    <stop offset="1" stop-color="#C3BFC7" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="f101ida"
@@ -279,8 +279,8 @@
                     y2="29.625"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#9B98B3"></stop>
-                    <stop offset="1" stopColor="#9C83AE"></stop>
+                    <stop stop-color="#9B98B3" />
+                    <stop offset="1" stop-color="#9C83AE" />
                 </linearGradient>
                 <linearGradient
                     id="f101idb"
@@ -290,8 +290,8 @@
                     y2="28.803"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#9B98B3"></stop>
-                    <stop offset="1" stopColor="#9C83AE"></stop>
+                    <stop stop-color="#9B98B3" />
+                    <stop offset="1" stop-color="#9C83AE" />
                 </linearGradient>
                 <linearGradient
                     id="f101idc"
@@ -301,8 +301,8 @@
                     y2="29.961"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset=".18" stopColor="#36A4F2"></stop>
-                    <stop offset="1" stopColor="#3E79CB"></stop>
+                    <stop offset=".18" stop-color="#36A4F2" />
+                    <stop offset="1" stop-color="#3E79CB" />
                 </linearGradient>
                 <linearGradient
                     id="f101idd"
@@ -312,8 +312,8 @@
                     y2="29.366"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset=".011" stopColor="#404E95"></stop>
-                    <stop offset="1" stopColor="#2F66B3" stopOpacity="0"></stop>
+                    <stop offset=".011" stop-color="#404E95" />
+                    <stop offset="1" stop-color="#2F66B3" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="f101ide"
@@ -323,8 +323,8 @@
                     y2="29.028"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#53BFFF"></stop>
-                    <stop offset="1" stopColor="#508EDC"></stop>
+                    <stop stop-color="#53BFFF" />
+                    <stop offset="1" stop-color="#508EDC" />
                 </linearGradient>
                 <linearGradient
                     id="f101idf"
@@ -334,8 +334,8 @@
                     y2="17.469"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#88858D"></stop>
-                    <stop offset="1" stopColor="#88858D" stopOpacity="0"></stop>
+                    <stop stop-color="#88858D" />
+                    <stop offset="1" stop-color="#88858D" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="f101idg"
@@ -345,8 +345,8 @@
                     y2="29.961"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset=".18" stopColor="#E93586"></stop>
-                    <stop offset="1" stopColor="#DD385F"></stop>
+                    <stop offset=".18" stop-color="#E93586" />
+                    <stop offset="1" stop-color="#DD385F" />
                 </linearGradient>
                 <linearGradient
                     id="f101idh"
@@ -356,8 +356,8 @@
                     y2="29.198"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#FA5598"></stop>
-                    <stop offset="1" stopColor="#F34F70"></stop>
+                    <stop stop-color="#FA5598" />
+                    <stop offset="1" stop-color="#F34F70" />
                 </linearGradient>
                 <linearGradient
                     id="f101idi"
@@ -367,8 +367,8 @@
                     y2="29.961"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset=".18" stopColor="#ABE263"></stop>
-                    <stop offset="1" stopColor="#61E19B"></stop>
+                    <stop offset=".18" stop-color="#ABE263" />
+                    <stop offset="1" stop-color="#61E19B" />
                 </linearGradient>
                 <linearGradient
                     id="f101idj"
@@ -378,8 +378,8 @@
                     y2="29.198"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#C9FE70"></stop>
-                    <stop offset="1" stopColor="#6CEDA7"></stop>
+                    <stop stop-color="#C9FE70" />
+                    <stop offset="1" stop-color="#6CEDA7" />
                 </linearGradient>
                 <filter
                     id="f101idk"
@@ -387,78 +387,75 @@
                     height="29.906"
                     x="1.047"
                     y="1.055"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feColorMatrix
                         in="SourceAlpha"
                         result="hardAlpha"
                         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    ></feColorMatrix>
-                    <feOffset dx="-1" dy="1"></feOffset>
-                    <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                    />
+                    <feOffset dx="-1" dy="1" />
+                    <feGaussianBlur stdDeviation="1" />
                     <feComposite
                         in2="hardAlpha"
                         k2="-1"
                         k3="1"
                         operator="arithmetic"
-                    ></feComposite>
+                    />
                     <feColorMatrix
                         values="0 0 0 0 0.878431 0 0 0 0 0.87451 0 0 0 0 0.886275 0 0 0 1 0"
-                    ></feColorMatrix>
+                    />
                     <feBlend
                         in2="shape"
                         result="effect1_innerShadow_18_23005"
-                    ></feBlend>
+                    />
                     <feColorMatrix
                         in="SourceAlpha"
                         result="hardAlpha"
                         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    ></feColorMatrix>
-                    <feOffset dx="1.5" dy="-1"></feOffset>
-                    <feGaussianBlur stdDeviation="1.5"></feGaussianBlur>
+                    />
+                    <feOffset dx="1.5" dy="-1" />
+                    <feGaussianBlur stdDeviation="1.5" />
                     <feComposite
                         in2="hardAlpha"
                         k2="-1"
                         k3="1"
                         operator="arithmetic"
-                    ></feComposite>
+                    />
                     <feColorMatrix
                         values="0 0 0 0 0.698039 0 0 0 0 0.67451 0 0 0 0 0.721569 0 0 0 1 0"
-                    ></feColorMatrix>
+                    />
                     <feBlend
                         in2="effect1_innerShadow_18_23005"
                         result="effect2_innerShadow_18_23005"
-                    ></feBlend>
+                    />
                     <feColorMatrix
                         in="SourceAlpha"
                         result="hardAlpha"
                         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    ></feColorMatrix>
-                    <feOffset dx=".25"></feOffset>
-                    <feGaussianBlur stdDeviation=".25"></feGaussianBlur>
+                    />
+                    <feOffset dx=".25" />
+                    <feGaussianBlur stdDeviation=".25" />
                     <feComposite
                         in2="hardAlpha"
                         k2="-1"
                         k3="1"
                         operator="arithmetic"
-                    ></feComposite>
+                    />
                     <feColorMatrix
                         values="0 0 0 0 0.729412 0 0 0 0 0.729412 0 0 0 0 0.729412 0 0 0 1 0"
-                    ></feColorMatrix>
+                    />
                     <feBlend
                         in2="effect2_innerShadow_18_23005"
                         result="effect3_innerShadow_18_23005"
-                    ></feBlend>
+                    />
                 </filter>
                 <filter
                     id="f101idl"
@@ -466,22 +463,19 @@
                     height="24.155"
                     x="20.505"
                     y="6.043"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feGaussianBlur
                         result="effect1_foregroundBlur_18_23005"
                         stdDeviation=".5"
-                    ></feGaussianBlur>
+                    />
                 </filter>
                 <filter
                     id="f101idm"
@@ -489,22 +483,19 @@
                     height="14.589"
                     x="11.485"
                     y="16.036"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feGaussianBlur
                         result="effect1_foregroundBlur_18_23005"
                         stdDeviation=".5"
-                    ></feGaussianBlur>
+                    />
                 </filter>
                 <filter
                     id="f101idn"
@@ -512,22 +503,19 @@
                     height="21.375"
                     x="2.357"
                     y="8.428"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feGaussianBlur
                         result="effect1_foregroundBlur_18_23005"
                         stdDeviation=".5"
-                    ></feGaussianBlur>
+                    />
                 </filter>
                 <filter
                     id="f101ido"
@@ -535,38 +523,35 @@
                     height="24.367"
                     x="22.073"
                     y="5.594"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feColorMatrix
                         in="SourceAlpha"
                         result="hardAlpha"
                         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    ></feColorMatrix>
-                    <feOffset dx=".75"></feOffset>
-                    <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                    />
+                    <feOffset dx=".75" />
+                    <feGaussianBlur stdDeviation=".5" />
                     <feComposite
                         in2="hardAlpha"
                         k2="-1"
                         k3="1"
                         operator="arithmetic"
-                    ></feComposite>
+                    />
                     <feColorMatrix
                         values="0 0 0 0 0.203922 0 0 0 0 0.482353 0 0 0 0 0.74902 0 0 0 1 0"
-                    ></feColorMatrix>
+                    />
                     <feBlend
                         in2="shape"
                         result="effect1_innerShadow_18_23005"
-                    ></feBlend>
+                    />
                 </filter>
                 <filter
                     id="f101idp"
@@ -574,22 +559,19 @@
                     height="24.502"
                     x="25.394"
                     y="5.527"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feGaussianBlur
                         result="effect1_foregroundBlur_18_23005"
                         stdDeviation=".5"
-                    ></feGaussianBlur>
+                    />
                 </filter>
                 <filter
                     id="f101idq"
@@ -597,38 +579,35 @@
                     height="13.314"
                     x="13.053"
                     y="16.647"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feColorMatrix
                         in="SourceAlpha"
                         result="hardAlpha"
                         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    ></feColorMatrix>
-                    <feOffset dx=".75"></feOffset>
-                    <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                    />
+                    <feOffset dx=".75" />
+                    <feGaussianBlur stdDeviation=".5" />
                     <feComposite
                         in2="hardAlpha"
                         k2="-1"
                         k3="1"
                         operator="arithmetic"
-                    ></feComposite>
+                    />
                     <feColorMatrix
                         values="0 0 0 0 0.67451 0 0 0 0 0.239216 0 0 0 0 0.372549 0 0 0 1 0"
-                    ></feColorMatrix>
+                    />
                     <feBlend
                         in2="shape"
                         result="effect1_innerShadow_18_23005"
-                    ></feBlend>
+                    />
                 </filter>
                 <filter
                     id="f101idr"
@@ -636,22 +615,19 @@
                     height="13.643"
                     x="16.374"
                     y="16.555"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feGaussianBlur
                         result="effect1_foregroundBlur_18_23005"
                         stdDeviation=".5"
-                    ></feGaussianBlur>
+                    />
                 </filter>
                 <filter
                     id="f101ids"
@@ -659,38 +635,35 @@
                     height="21.296"
                     x="4.033"
                     y="8.665"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feColorMatrix
                         in="SourceAlpha"
                         result="hardAlpha"
                         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    ></feColorMatrix>
-                    <feOffset dx=".75"></feOffset>
-                    <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                    />
+                    <feOffset dx=".75" />
+                    <feGaussianBlur stdDeviation=".5" />
                     <feComposite
                         in2="hardAlpha"
                         k2="-1"
                         k3="1"
                         operator="arithmetic"
-                    ></feComposite>
+                    />
                     <feColorMatrix
                         values="0 0 0 0 0.415686 0 0 0 0 0.792157 0 0 0 0 0.466667 0 0 0 1 0"
-                    ></feColorMatrix>
+                    />
                     <feBlend
                         in2="shape"
                         result="effect1_innerShadow_18_23005"
-                    ></feBlend>
+                    />
                 </filter>
                 <filter
                     id="f101idt"
@@ -698,22 +671,19 @@
                     height="21.77"
                     x="7.678"
                     y="8.428"
-                    colorInterpolationFilters="sRGB"
+                    color-interpolation-filters="sRGB"
                     filterUnits="userSpaceOnUse"
                 >
-                    <feFlood
-                        floodOpacity="0"
-                        result="BackgroundImageFix"
-                    ></feFlood>
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
                     <feBlend
                         in="SourceGraphic"
                         in2="BackgroundImageFix"
                         result="shape"
-                    ></feBlend>
+                    />
                     <feGaussianBlur
                         result="effect1_foregroundBlur_18_23005"
                         stdDeviation=".5"
-                    ></feGaussianBlur>
+                    />
                 </filter>
                 <radialGradient
                     id="f101idu"
@@ -723,8 +693,8 @@
                     gradientTransform="matrix(-5.58858 .20883 -.81418 -21.7886 29.953 16.403)"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#F2EDF5"></stop>
-                    <stop offset="1" stopColor="#DED3E7" stopOpacity="0"></stop>
+                    <stop stop-color="#F2EDF5" />
+                    <stop offset="1" stop-color="#DED3E7" stop-opacity="0" />
                 </radialGradient>
                 <radialGradient
                     id="f101idv"
@@ -734,8 +704,8 @@
                     gradientTransform="matrix(-3.69009 3.2723 -3.38707 -3.81951 29.586 2.896)"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#F7F4F7"></stop>
-                    <stop offset="1" stopColor="#E2DCE5" stopOpacity="0"></stop>
+                    <stop stop-color="#F7F4F7" />
+                    <stop offset="1" stop-color="#E2DCE5" stop-opacity="0" />
                 </radialGradient>
                 <radialGradient
                     id="f101idw"
@@ -745,8 +715,8 @@
                     gradientTransform="matrix(-2.46588 0 0 -2.37936 14.324 20.93)"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset=".228" stopColor="#86738A"></stop>
-                    <stop offset="1" stopColor="#86738A" stopOpacity="0"></stop>
+                    <stop offset=".228" stop-color="#86738A" />
+                    <stop offset="1" stop-color="#86738A" stop-opacity="0" />
                 </radialGradient>
             </defs>
         </g>

@@ -10,7 +10,9 @@
 <style module="classes">
 .logoWrapper {
     display: flex;
+
     flex-direction: column;
+
     row-gap: 6px;
 }
 
