@@ -49,6 +49,8 @@ module.exports = {
         },
     ],
     rules: {
+        "no-console": 0,
+        "no-debugger": 0,
         "sort-imports": 0,
         "node/no-missing-import": 0,
         "prettier/prettier": [

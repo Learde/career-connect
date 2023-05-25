@@ -1,5 +1,7 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
 const tabs = [
     {
         name: "jobs",
@@ -23,19 +25,28 @@ const tabs = [
     },
 ];
 const currentTab = ref("jobs");
+
+watch(currentTab, () => {
+    router.push({ name: "JobsList" });
+});
 </script>
 
 <template>
-    <n-tabs type="line" justify-content="center" defa animated>
+    <n-tabs
+        type="line"
+        justify-content="center"
+        defa
+        animated
+        :value="currentTab"
+        :on-update:value="(val) => (currentTab = val)"
+    >
         <n-tab-pane
             v-for="tab in tabs"
             :key="tab.name"
             :name="tab.name"
             :tab="tab.tab"
-            :value="currentTab"
-            :on-update:value="(val) => (current = val)"
         >
-            {{ tab.tab }}
+            <router-view></router-view>
         </n-tab-pane>
     </n-tabs>
 </template>
