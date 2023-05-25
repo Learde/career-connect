@@ -49,7 +49,9 @@ module.exports = {
         },
     ],
     rules: {
-        "vue/component-name-in-template-casing": ["error", "PascalCase"],
+        "vue/component-name-in-template-casing": ["error", "PascalCase", {
+            "registeredComponentsOnly": false,
+        }],
         "sort-imports": 0,
         "node/no-missing-import": 0,
         "prettier/prettier": [
