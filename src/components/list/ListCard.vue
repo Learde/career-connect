@@ -6,6 +6,8 @@ defineProps({
     hasClose: { type: Boolean, default: false },
     hasDelete: { type: Boolean, default: false },
 });
+
+defineEmits(["edit", "close", "delete"]);
 </script>
 
 <template>
