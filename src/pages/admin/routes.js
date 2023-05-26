@@ -1,5 +1,4 @@
 /* eslint-disable node/no-unsupported-features/es-syntax */
-import { TheJobs } from "@/modules/admin";
 export default [
     {
         name: "AdminList",
@@ -9,7 +8,7 @@ export default [
             {
                 name: "JobsList",
                 path: "jobs",
-                component: TheJobs,
+                component: () => import("@/modules/admin/JobsTab.vue"),
             },
         ],
     },
