@@ -6,28 +6,33 @@ const tabs = [
     {
         name: "jobs",
         tab: "Вакансии",
+        route: "JobsList",
     },
     {
-        name: "reserve",
+        name: "reserves",
         tab: "Резерв",
+        route: "AdminReserve",
     },
     {
-        name: "stats",
+        name: "statistics",
         tab: "Статистика",
+        route: "AdminStatistics",
     },
     {
         name: "responses",
         tab: "Отклики",
+        route: "ResponsesList",
     },
     {
         name: "tests",
         tab: "Тесты",
+        route: "TestsList",
     },
 ];
 const currentTab = ref("jobs");
 
-watch(currentTab, () => {
-    router.push({ name: "JobsList" });
+watch(currentTab, (v) => {
+    router.push({ name: tabs.find(({ name }) => name === v).route });
 });
 </script>
 
