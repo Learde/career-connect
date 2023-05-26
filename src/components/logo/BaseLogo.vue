@@ -2,7 +2,7 @@
 
 <template>
     <div :class="classes.logoWrapper">
-        <img src="/src/shared/images/scb_logo_red_black.svg" alt="Совкомбанк" />
+        <img src="/src/shared/images/scb_logo.svg" alt="Совкомбанк" />
         <span>CareerConnect</span>
     </div>
 </template>
