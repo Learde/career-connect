@@ -8,7 +8,7 @@ export default [
             {
                 name: "JobsList",
                 path: "jobs",
-                component: () => import("@/modules/admin/JobsTab.vue"),
+                component: () => import("@/modules/admin/jobs/JobsTab.vue"),
             },
         ],
     },

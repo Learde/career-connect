@@ -1,1 +1,1 @@
-export { default as TheJobs } from "./JobsTab.vue";
+export { default as TheJobs } from "./jobs/JobsTab.vue";
