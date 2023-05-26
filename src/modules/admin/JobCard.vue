@@ -1,65 +1,30 @@
 <script setup>
-import { IconEdit, IconClose, IconDelete } from "@/shared";
+import { ListCard } from "@/components";
+import { IconRubble } from "@/shared";
 </script>
 
 <template>
-    <div :class="classes.main">
-        <div :class="classes.header">
-            <span>Python-разработчик</span>
-            <div :class="classes.icons">
-                <IconEdit />
-                <IconClose />
-                <IconDelete />
+    <ListCard has-close has-delete has-edit>
+        <template #title> Python-разработчик </template>
+        <template #content>
+            <div :class="classes.content">
+                <span>Middle</span>
+                <span>Python</span>
+                <span>Django</span>
             </div>
-        </div>
-        <div :calss="classes.tags">
-            <span>Middle</span>
-            <span>Python</span>
-            <span>Django</span>
-        </div>
-        <div :class="classes.footer">
-            <NButton text-color="#000" color="#fff">
-                Откликнувшиеся кандидаты
-            </NButton>
-            <div>
-                <span>100000-100001 Р</span>
+        </template>
+        <template #footer>
+            <div :class="classes.footer">
+                <NButton type="info"> Откликнувшиеся кандидаты </NButton>
+                <div :class="classes.salary">
+                    <span>100000-100001</span><IconRubble :size="18" />
+                </div>
             </div>
-        </div>
-    </div>
+        </template>
+    </ListCard>
 </template>
 
-<style module="classes" lang="scss">
-.main {
-    width: 100%;
-    min-height: 105px;
-    padding: 12px 35px;
-
-    background: #ff4b5f1a;
-    border-radius: 8px;
-}
-
-.header {
-    display: flex;
-
-    justify-content: space-between;
-
-    font-size: 15px;
-
-    font-weight: 500;
-
-    .icons {
-        display: flex;
-
-        gap: 15px;
-    }
-}
-
-.tags {
-    margin-top: 5px;
-
-    font-size: 15px;
-}
-
+<style lang="scss" module="classes">
 .footer {
     display: flex;
 
@@ -70,22 +35,35 @@ import { IconEdit, IconClose, IconDelete } from "@/shared";
     margin-top: 10px;
 
     font-size: 16px;
+    font-weight: 500;
 
-    font-weight: 700;
+    color: var(--c-primary);
+}
 
-    color: #ff4b5f;
+.content {
+    span:not(:last-child) {
+        display: inline-block;
 
-    button {
-        padding: 6px 20px;
+        margin-right: 5px;
 
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
+        &::after {
+            display: inline-block;
 
-        cursor: pointer;
+            margin-left: 5px;
 
-        border: none;
-        border-radius: 5px;
+            content: "•";
+        }
+    }
+}
+
+.salary {
+    display: flex;
+
+    align-items: center;
+
+    svg {
+        position: relative;
+        top: 1px;
     }
 }
 </style>
