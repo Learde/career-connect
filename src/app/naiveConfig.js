@@ -9,6 +9,7 @@ export const naiveConfig = {
         infoColor: "#003791",
         infoColorHover: "#003183",
         infoColorPressed: "#00296d",
+        borderRadius: "6px",
     },
     Button: {
         borderRadiusMedium: "6px",

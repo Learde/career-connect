@@ -3,7 +3,7 @@ export default [
     {
         name: "AdminList",
         path: "/admin",
-        component: () => import("./AdminList.vue"),
+        component: () => import("./AdminPanel.vue"),
         children: [
             {
                 name: "JobsList",

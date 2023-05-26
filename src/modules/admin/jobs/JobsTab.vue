@@ -1,11 +1,13 @@
 <script setup>
+import { ListHeader } from "@/components";
+
 import JobCard from "./JobCard.vue";
 </script>
 
 <template>
-    <div :class="classes.menu">
-        <NButton type="primary">Создать вакансию</NButton>
-    </div>
+    <ListHeader :class="classes.menu">
+        <template #button-text> Создать вакансию </template>
+    </ListHeader>
     <div :class="classes.list">
         <JobCard />
         <JobCard />
@@ -16,10 +18,6 @@ import JobCard from "./JobCard.vue";
 
 <style module="classes">
 .menu {
-    display: flex;
-
-    justify-content: center;
-
     margin: 20px 0 30px;
 }
 
