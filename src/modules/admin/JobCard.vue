@@ -18,9 +18,9 @@ import { IconEdit, IconClose, IconDelete } from "@/shared";
             <span>Django</span>
         </div>
         <div :class="classes.footer">
-            <n-button text-color="#000" color="#fff">
+            <NButton text-color="#000" color="#fff">
                 Откликнувшиеся кандидаты
-            </n-button>
+            </NButton>
             <div>
                 <span>100000-100001 Р</span>
             </div>

@@ -13,6 +13,7 @@ export default defineConfig({
         eslint({
             include: "**/*.{js,ts,vue}",
             exclude: ["**/node_modules/**"],
+            fix: true,
         }),
         stylelint({
             dev: true,

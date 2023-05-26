@@ -32,7 +32,7 @@ watch(currentTab, () => {
 </script>
 
 <template>
-    <n-tabs
+    <NTabs
         type="line"
         justify-content="center"
         defa
@@ -40,15 +40,15 @@ watch(currentTab, () => {
         :value="currentTab"
         :on-update:value="(val) => (currentTab = val)"
     >
-        <n-tab-pane
+        <NTabPane
             v-for="tab in tabs"
             :key="tab.name"
             :name="tab.name"
             :tab="tab.tab"
         >
-            <router-view></router-view>
-        </n-tab-pane>
-    </n-tabs>
+            <RouterView></RouterView>
+        </NTabPane>
+    </NTabs>
 </template>
 
 <style scoped></style>
