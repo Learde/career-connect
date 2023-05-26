@@ -24,5 +24,6 @@
 .logoWrapper span {
     font-size: 16px;
     font-weight: 300;
+    color: var(--c-secondary);
 }
 </style>
