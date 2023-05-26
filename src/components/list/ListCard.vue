@@ -57,7 +57,7 @@ defineEmits(["edit", "close", "delete"]);
 
     justify-content: space-between;
 
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
     font-size: 15px;
 
@@ -83,7 +83,7 @@ defineEmits(["edit", "close", "delete"]);
 }
 
 .content {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     font-size: 15px;
 }
