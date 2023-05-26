@@ -37,6 +37,7 @@ watch(currentTab, () => {
         justify-content="center"
         defa
         animated
+        :pane-wrapper-class="classes.tabsWrapper"
         :value="currentTab"
         :on-update:value="(val) => (currentTab = val)"
     >
@@ -51,4 +52,8 @@ watch(currentTab, () => {
     </NTabs>
 </template>
 
-<style scoped></style>
+<style module="classes">
+.tabsWrapper {
+    overflow: initial !important;
+}
+</style>

@@ -22,7 +22,7 @@ import { BaseLogo } from "@/components";
 
     height: var(--header-height);
 
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 15%);
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 10%);
 }
 
 .headerContent {

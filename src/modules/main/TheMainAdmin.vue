@@ -1,12 +1,10 @@
 <script setup>
 import { BaseBox } from "@/shared";
-
-import MainIcons from "./MainIcons.vue";
 </script>
 
 <template>
     <main :class="classes.main">
-        <MainIcons />
+        <!--        <MainIcons />-->
         <BaseBox :class="classes.mainBox">
             <slot />
         </BaseBox>
@@ -26,9 +24,8 @@ import MainIcons from "./MainIcons.vue";
 
     min-height: calc(100vh - var(--header-height));
     padding: var(--padding-y) 0;
-    overflow: hidden;
 
-    background-color: var(--c-background);
+    background: var(--c-background);
 }
 
 .mainBox {
