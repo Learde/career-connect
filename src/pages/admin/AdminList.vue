@@ -1,0 +1,54 @@
+<script setup>
+import { ref, watch } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+const tabs = [
+    {
+        name: "jobs",
+        tab: "Вакансии",
+    },
+    {
+        name: "reserve",
+        tab: "Резерв",
+    },
+    {
+        name: "stats",
+        tab: "Статистика",
+    },
+    {
+        name: "responses",
+        tab: "Отклики",
+    },
+    {
+        name: "tests",
+        tab: "Тесты",
+    },
+];
+const currentTab = ref("jobs");
+
+watch(currentTab, () => {
+    router.push({ name: "JobsList" });
+});
+</script>
+
+<template>
+    <n-tabs
+        type="line"
+        justify-content="center"
+        defa
+        animated
+        :value="currentTab"
+        :on-update:value="(val) => (currentTab = val)"
+    >
+        <n-tab-pane
+            v-for="tab in tabs"
+            :key="tab.name"
+            :name="tab.name"
+            :tab="tab.tab"
+        >
+            <router-view></router-view>
+        </n-tab-pane>
+    </n-tabs>
+</template>
+
+<style scoped></style>
