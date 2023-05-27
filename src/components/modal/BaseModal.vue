@@ -21,16 +21,24 @@ const localIsOpened = computed({
     <NModal v-model:show="localIsOpened">
         <div :class="classes.modalContent">
             <div :class="classes.modalHeader">
-                <IconClose :class="classes.closeIcon" />
+                <h2><slot name="title" /></h2>
+                <IconClose
+                    :class="classes.closeIcon"
+                    @click="localIsOpened = false"
+                />
+            </div>
+            <div>
+                <slot name="content" />
             </div>
         </div>
     </NModal>
 </template>
 
-<style module="classes">
+<style lang="scss" module="classes">
 .modalContent {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
+    padding: 10px 20px;
 
     background: var(--c-foreground);
     border-radius: var(--border-radius);
@@ -41,9 +49,18 @@ const localIsOpened = computed({
 
     align-items: center;
     justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
+    }
 }
 
 .closeIcon {
+    margin-left: auto;
+
     color: var(--c-gray);
 
     cursor: pointer;
