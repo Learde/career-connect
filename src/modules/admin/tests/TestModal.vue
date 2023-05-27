@@ -55,14 +55,19 @@ createQuestion();
     <BaseModal v-model:is-opened="localIsOpened">
         <template #title> {{ title }} </template>
         <template #content>
-            <TestQuestionEditor
-                v-for="(question, index) in questions"
-                :key="question.id"
-                :number="index + 1"
-                v-model:title="question.title"
-                v-model:has-multiple-answers="question.hasMultipleAnswers"
-                v-model:answers="question.answers"
-            />
+            <template v-for="(question, index) in questions" :key="question.id">
+                <NDivider> Вопрос #{{ index + 1 }} </NDivider>
+                <TestQuestionEditor
+                    v-model:title="question.title"
+                    v-model:has-multiple-answers="question.hasMultipleAnswers"
+                    v-model:answers="question.answers"
+                />
+            </template>
+            <div :class="classes.questionAction">
+                <NButton type="primary" @click="createQuestion"
+                    >Добавить вопрос</NButton
+                >
+            </div>
             <div :class="classes.actions">
                 <NButton type="primary">Сохранить</NButton>
             </div>
@@ -71,6 +76,14 @@ createQuestion();
 </template>
 
 <style module="classes">
+.questionAction {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
 .actions {
     display: flex;
 

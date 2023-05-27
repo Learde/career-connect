@@ -3,7 +3,6 @@ import { computed } from "vue";
 
 const props = defineProps({
     title: String,
-    number: Number,
     hasMultipleAnswers: Boolean,
     answers: Array,
 });
@@ -42,7 +41,6 @@ const questionAnswers = computed({
 </script>
 
 <template>
-    <h4 :class="classes.heading">Вопрос #{{ number }}</h4>
     <NForm>
         <NFormItem label="Название вопроса" path="title">
             <NInput
@@ -63,18 +61,27 @@ const questionAnswers = computed({
                 :key="index"
                 :class="classes.answer"
             >
-                <NFormItem label="Текст ответа">
+                <NFormItem label="Текст ответа" :class="classes.answerInput">
                     <NInput
                         v-model:value="answer.title"
                         placeholder="Введите текст"
                     />
                 </NFormItem>
+                <NCheckbox
+                    :class="classes.rightCheckbox"
+                    v-model:checked="questionHasMultipleAnswers"
+                >
+                    Верный
+                </NCheckbox>
+            </div>
+            <div :class="classes.answerAction">
+                <NButton type="info">Добавить ответ</NButton>
             </div>
         </div>
     </NForm>
 </template>
 
-<style module="classes">
+<style lang="scss" module="classes">
 .heading {
     margin-bottom: 10px;
 
@@ -86,7 +93,36 @@ const questionAnswers = computed({
     margin-bottom: 24px;
 }
 
+.rightCheckbox {
+    display: flex;
+
+    flex-direction: column-reverse;
+
+    align-items: center;
+
+    & > span {
+        padding: 0 !important;
+        margin-bottom: 5px;
+
+        white-space: nowrap;
+    }
+}
+
+.answerInput {
+    width: 100%;
+}
+
+.answerAction {
+    display: flex;
+
+    justify-content: center;
+}
+
 .answer {
-    padding-left: 30px;
+    display: flex;
+
+    gap: 30px;
+
+    align-items: flex-start;
 }
 </style>

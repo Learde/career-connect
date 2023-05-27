@@ -39,6 +39,7 @@ const localIsOpened = computed({
     width: 100%;
     max-width: 800px;
     padding: 10px 20px;
+    margin: 20px auto;
 
     background: var(--c-foreground);
     border-radius: var(--border-radius);
