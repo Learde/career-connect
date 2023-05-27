@@ -1,7 +1,10 @@
 <script setup>
 import { ref, watch } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
+
 const router = useRouter();
+const currentRoute = useRoute();
+
 const tabs = [
     {
         name: "jobs",
@@ -29,10 +32,13 @@ const tabs = [
         route: "TestsList",
     },
 ];
-const currentTab = ref("jobs");
+const getRouteByName = (n) => tabs.find(({ name }) => name === n).route;
+const getNameByRoute = (r) => tabs.find(({ route }) => route === r).name;
 
-watch(currentTab, (v) => {
-    router.push({ name: tabs.find(({ name }) => name === v).route });
+const currentTab = ref(getNameByRoute(currentRoute.name));
+
+watch(currentTab, (value) => {
+    router.push({ name: getRouteByName(value) });
 });
 </script>
 
