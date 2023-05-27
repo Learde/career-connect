@@ -3,7 +3,7 @@ import axios from "axios";
 import { isFunction } from "../lib";
 
 // Constants
-const BASE_URL = window.BASE_URL ?? "https://api.com";
+const BASE_URL = window.BASE_URL ?? "http://51.250.105.58/api/";
 
 // Variables
 let token = null;

@@ -1,11 +1,19 @@
 <script setup>
+import { computed } from "vue";
+
 import { ListCard } from "@/components";
 import { IconRubble } from "@/shared";
+
+const props = defineProps({
+    job: Object,
+});
+
+const card = computed(props.job);
 </script>
 
 <template>
     <ListCard has-close has-delete has-edit>
-        <template #title> Python-разработчик </template>
+        <template #title> {{ card.title }} </template>
         <template #content>
             <div :class="classes.content">
                 <span>Middle</span>

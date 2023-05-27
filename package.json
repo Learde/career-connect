@@ -13,6 +13,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^38.0.1",
+    "@ckeditor/ckeditor5-vue": "^5.1.0",
     "@iconify-prerendered/vue-fluent-emoji": "^0.22.1676715458",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
