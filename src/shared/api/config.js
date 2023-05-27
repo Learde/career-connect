@@ -6,7 +6,8 @@ import { isFunction } from "../lib";
 const BASE_URL = window.BASE_URL ?? "http://51.250.105.58/api/";
 
 // Variables
-let token = null;
+let token =
+    "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiLQvdCz0L3QsyIsImlhdCI6MTY4NTIxNDMxMywiZXhwIjoxNjg1MjE1NzUzfQ.sYShhYUq9lrUvCBUVBfXfz2DLBHMHrWDJpZ627WeLgA";
 let handleResponseFulfilled = null;
 let handleResponseRejected = null;
 

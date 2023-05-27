@@ -14,6 +14,8 @@
     flex-direction: column;
 
     row-gap: 6px;
+
+    padding-left: 20px;
 }
 
 .logoWrapper img {

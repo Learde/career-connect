@@ -163,13 +163,46 @@ const options3 = [
     width: 50%;
 
     margin-top: 5px;
+    margin-bottom: 10px;
 
     font-size: 20px;
 }
 
 .accordion {
     width: 600px;
-    margin: 45px 0 20px;
+    margin: 10px 0;
+}
+
+@media (max-width: 730px) {
+    .sloganBlock {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slogan {
+        font-size: 20px;
+        font-weight: 500px;
+    }
+
+    .mainText {
+        display: inline-block;
+
+        width: 80%;
+
+        margin-top: 5px;
+
+        margin-top: 25px;
+
+        font-size: 18px;
+    }
+
+    .accordion {
+        width: 400px;
+    }
 }
 </style>
 
@@ -181,19 +214,12 @@ const options3 = [
     background-color: #fff !important;
 }
 
-:global(
-        .accordion
-            .n-submenu-children
-            .n-menu-item-content
-            .n-menu-item-content-header
-    ) {
-    overflow: inherit;
-
-    white-space: normal;
+:global(.accordion .n-submenu-children .n-menu-item-content) {
+    padding-left: 34px !important;
 }
 
-:global(.accordion .n-submenu-children) {
-    overflow: inherit !important;
+:global(.accordion .n-submenu-children .n-menu-item) {
+    height: 100px;
 }
 
 :global(.accordion .n-menu-item-content::before) {
@@ -207,6 +233,36 @@ const options3 = [
             ):hover::before
     ) {
     background-color: #ff052220;
+}
+
+:global(.accordion .n-submenu-children) {
+    overflow: unset !important;
+}
+
+@media (max-width: 730px) {
+    :global(
+            .accordion
+                .n-submenu-children
+                .n-menu-item-content
+                .n-menu-item-content-header
+        ) {
+        overflow: inherit !important;
+
+        white-space: normal !important;
+    }
+}
+
+@media (min-width: 730px) {
+    :global(
+            .accordion
+                .n-submenu-children
+                .n-menu-item-content
+                .n-menu-item-content-header
+        ) {
+        overflow: unset;
+
+        white-space: normal;
+    }
 }
 
 /* stylelint-enable selector-class-pattern */
