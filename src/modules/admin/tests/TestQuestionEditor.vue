@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 
 const props = defineProps({
     title: String,
@@ -38,6 +38,18 @@ const questionAnswers = computed({
         emit("update:answers", v);
     },
 });
+
+// answers
+const answerPattern = { title: "", isCorrect: false };
+const answerId = ref(2);
+
+const createAnswer = () => {
+    const copyAnswer = JSON.parse(JSON.stringify(answerPattern));
+
+    copyAnswer.id = answerId.value++;
+
+    questionAnswers.value.push(copyAnswer);
+};
 </script>
 
 <template>
@@ -57,8 +69,8 @@ const questionAnswers = computed({
         <div>
             <h5 :class="classes.heading">Ответы:</h5>
             <div
-                v-for="(answer, index) in questionAnswers"
-                :key="index"
+                v-for="answer in questionAnswers"
+                :key="answer.id"
                 :class="classes.answer"
             >
                 <NFormItem label="Текст ответа" :class="classes.answerInput">
@@ -69,13 +81,15 @@ const questionAnswers = computed({
                 </NFormItem>
                 <NCheckbox
                     :class="classes.rightCheckbox"
-                    v-model:checked="questionHasMultipleAnswers"
+                    v-model:checked="answer.isCorrect"
                 >
                     Верный
                 </NCheckbox>
             </div>
             <div :class="classes.answerAction">
-                <NButton type="info">Добавить ответ</NButton>
+                <NButton @click="createAnswer" type="info">
+                    Добавить ответ
+                </NButton>
             </div>
         </div>
     </NForm>

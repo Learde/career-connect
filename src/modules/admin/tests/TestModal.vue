@@ -34,7 +34,7 @@ const questionPattern = {
     id: 1,
     title: "",
     hasMultipleAnswers: false,
-    answers: [{ title: "", isRight: false }],
+    answers: [{ id: 1, title: "", isCorrect: false }],
 };
 
 const questions = ref([]);
