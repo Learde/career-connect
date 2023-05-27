@@ -22,6 +22,8 @@ defineEmits(["create", "search"]);
     gap: 30px;
 
     justify-content: space-between;
+
+    padding: 20px 0 30px;
 }
 
 .input {

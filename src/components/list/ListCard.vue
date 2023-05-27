@@ -11,7 +11,7 @@ defineEmits(["edit", "close", "delete", "click"]);
 </script>
 
 <template>
-    <div :class="classes.card" v-if="$emit('click')">
+    <div :class="classes.card" @click="$emit('click')">
         <div :class="classes.header">
             <h4><slot name="title" /></h4>
             <div :class="classes.icons">
