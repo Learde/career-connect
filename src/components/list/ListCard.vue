@@ -7,28 +7,28 @@ defineProps({
     hasDelete: { type: Boolean, default: false },
 });
 
-defineEmits(["edit", "close", "delete"]);
+defineEmits(["edit", "close", "delete", "click"]);
 </script>
 
 <template>
-    <div :class="classes.card">
+    <div :class="classes.card" v-if="$emit('click')">
         <div :class="classes.header">
             <h4><slot name="title" /></h4>
             <div :class="classes.icons">
                 <IconEdit
                     v-if="hasEdit"
                     :class="classes.icon"
-                    @click="$emit('edit')"
+                    @click.stop="$emit('edit')"
                 />
                 <IconClose
                     v-if="hasClose"
                     :class="classes.icon"
-                    @click="$emit('close')"
+                    @click.stop="$emit('close')"
                 />
                 <IconDelete
                     v-if="hasDelete"
                     :class="classes.icon"
-                    @click="$emit('delete')"
+                    @click.stop="$emit('delete')"
                 />
             </div>
         </div>
