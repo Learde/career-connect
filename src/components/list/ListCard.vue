@@ -48,7 +48,7 @@ defineEmits(["edit", "close", "delete", "click"]);
     padding: 12px 35px;
 
     background: var(--c-foreground);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 4%);
 }
 
@@ -71,11 +71,11 @@ defineEmits(["edit", "close", "delete", "click"]);
 }
 
 .icon {
-    color: #7a7a7a;
+    color: var(--c-gray);
 
     cursor: pointer;
 
-    transition: all 0.2s;
+    transition: var(--base-transition);
 
     &:hover {
         color: var(--c-secondary);

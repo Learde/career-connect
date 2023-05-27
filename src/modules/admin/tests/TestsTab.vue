@@ -1,7 +1,10 @@
 <script setup>
+import { ref } from "vue";
+
 import { ListHeader } from "@/components";
 
 import TestCard from "./TestCard.vue";
+import TestModal from "./TestModal.vue";
 
 const tests = [
     {
@@ -25,15 +28,18 @@ const tests = [
         description: "Краткое описание теста",
     },
 ];
+
+const isModalOpened = ref(false);
 </script>
 
 <template>
-    <ListHeader>
+    <ListHeader @create="isModalOpened = true">
         <template #button-text> Создать тест </template>
     </ListHeader>
     <div :class="classes.list">
         <TestCard v-for="test in tests" :key="test.id" :test="test" />
     </div>
+    <TestModal v-model:is-opened="isModalOpened" />
 </template>
 
 <style module="classes">

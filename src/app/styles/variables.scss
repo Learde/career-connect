@@ -2,17 +2,23 @@
   // sizes
   --container-width: 1200px;
   --header-height: 74px;
+  --border-radius: 8px;
 
-  // marings, paddings, gaps
+  // margins, paddings, gaps
   --list-gap: 20px;
 
   // colors
   --c-primary: #ff4b5f;
   --c-secondary: #003791;
+  --c-gray: #7a7a7a;
+
   --c-background: linear-gradient(-45deg, rgba(0, 55, 145, 0.05) 0%, rgba(255, 75, 95, 0.05) 100%);
   --c-foreground: #fff;
 
-  //z-index
+  // z-indexes
   --z-header: 100;
   --z-main: 90;
+
+  // transitions
+  --base-transition: all 0.2s;
 }
