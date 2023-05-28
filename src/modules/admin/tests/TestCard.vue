@@ -8,7 +8,7 @@ defineEmits(["click"]);
 
 <template>
     <ListCard :class="classes.card" has-edit has-delete @click="$emit('click')">
-        <template #title>{{ test.title }}</template>
+        <template #title>{{ test.name }}</template>
         <template #content>{{ test.description }}</template>
     </ListCard>
 </template>
