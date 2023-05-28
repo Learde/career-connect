@@ -1,5 +1,18 @@
 <script setup>
-defineEmits(["create", "search"]);
+import { computed } from "vue";
+
+const props = defineProps({ search: String });
+
+const emit = defineEmits(["create", "update:search"]);
+
+const localSearch = computed({
+    get() {
+        return props.search;
+    },
+    set(v) {
+        emit("update:search", v);
+    },
+});
 </script>
 
 <template>
@@ -10,7 +23,7 @@ defineEmits(["create", "search"]);
         <NInput
             :class="classes.input"
             placeholder="Поиск"
-            @input="(v) => $emit('search', v)"
+            v-model:value="localSearch"
         />
     </div>
 </template>

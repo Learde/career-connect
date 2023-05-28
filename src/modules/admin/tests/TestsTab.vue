@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 
 import { ListHeader } from "@/components";
 import { getTests, deleteTest as apiDeleteTest } from "@/shared";
@@ -9,6 +9,15 @@ import TestModal from "./TestModal.vue";
 import TestViewModal from "./TestViewModal.vue";
 
 const tests = ref([]);
+const search = ref("");
+
+const filteredTests = computed(() => {
+    if (!search.value) return tests.value;
+
+    return tests.value.filter(({ name }) =>
+        name.toLowerCase().includes(search.value.toLowerCase())
+    );
+});
 
 const isModalOpened = ref(false);
 const isViewModalOpened = ref(false);
@@ -51,7 +60,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <ListHeader @create="isModalOpened = true">
+    <ListHeader v-model:search="search" @create="isModalOpened = true">
         <template #button-text> Создать тест </template>
     </ListHeader>
 
@@ -59,7 +68,7 @@ onMounted(() => {
         <NSpin v-if="isLoading" :show="isLoading" />
         <template v-else>
             <TestCard
-                v-for="test in tests"
+                v-for="test in filteredTests"
                 :key="test.id"
                 :test="test"
                 @edit="openModal(test)"
