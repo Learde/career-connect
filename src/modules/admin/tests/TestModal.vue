@@ -74,9 +74,9 @@ createQuestion();
                 />
             </template>
             <div :class="classes.questionAction">
-                <NButton type="primary" @click="createQuestion"
-                    >Добавить вопрос</NButton
-                >
+                <NButton type="primary" @click="createQuestion">
+                    Добавить вопрос
+                </NButton>
             </div>
             <div :class="classes.actions">
                 <NButton type="primary">Сохранить</NButton>

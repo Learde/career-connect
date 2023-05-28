@@ -55,6 +55,14 @@ const createAnswer = () => {
     questionAnswers.value.push(copyAnswer);
 };
 
+const deleteAnswer = (answer) => {
+    const ind = questionAnswers.value.findIndex((a) => a === answer);
+
+    if (ind >= 0) {
+        questionAnswers.value.splice(ind, 1);
+    }
+};
+
 const clearRightAnswers = () => {
     if (!questionHasMultipleAnswers.value) {
         questionAnswers.value.forEach((x) => (x.isCorrect = false));
@@ -81,7 +89,12 @@ const handleSelectCorrect = (value, answer) => {
                     placeholder="Введите название"
                 />
             </NFormItem>
-            <NButton v-if="hasDelete" type="default" secondary>
+            <NButton
+                v-if="hasDelete"
+                :class="classes.deleteButton"
+                type="default"
+                secondary
+            >
                 <IconDelete @click="$emit('delete')" />
             </NButton>
         </div>
@@ -111,6 +124,14 @@ const handleSelectCorrect = (value, answer) => {
                 >
                     Верный
                 </NCheckbox>
+                <NButton
+                    v-if="questionAnswers.length > 1"
+                    :class="classes.deleteButton"
+                    type="default"
+                    secondary
+                >
+                    <IconDelete @click="deleteAnswer(answer)" />
+                </NButton>
             </div>
             <div :class="classes.answerAction">
                 <NButton @click="createAnswer" type="info">
@@ -137,10 +158,10 @@ const handleSelectCorrect = (value, answer) => {
     & > div {
         width: 100%;
     }
+}
 
-    & > button {
-        margin-top: 26px;
-    }
+.deleteButton {
+    margin-top: 26px;
 }
 
 .checkbox {
@@ -156,7 +177,7 @@ const handleSelectCorrect = (value, answer) => {
 
     & > span {
         padding: 0 !important;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
 
         white-space: nowrap;
     }
