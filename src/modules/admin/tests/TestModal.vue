@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted } from "vue";
+import { computed, ref, watch } from "vue";
 
 import { BaseModal } from "@/components";
 import { isNil, createTest } from "@/shared";
@@ -12,7 +12,7 @@ const props = defineProps({
 });
 
 // v-model
-const emit = defineEmits(["update:isOpened"]);
+const emit = defineEmits(["update:isOpened", "save"]);
 
 const localIsOpened = computed({
     get() {
@@ -56,24 +56,37 @@ const deleteQuestion = (question) => {
     }
 };
 
-onMounted(() => {
-    // Create first question
-    createQuestion();
+watch(localIsOpened, () => {
+    if (props.test === null) {
+        // Create first question
+        createQuestion();
+    } else {
+        questions.value = props.test.questions;
+        testTitle.value = props.test.name;
+    }
 });
 
 // api
-const saveTest = () => {
+const isLoading = ref(false);
+const saveTest = async () => {
     const test = {
         name: testTitle.value,
         questions: questions.value,
     };
 
-    createTest(test);
+    isLoading.value = true;
+
+    if (props.test === null) await createTest(test);
+
+    isLoading.value = false;
+    localIsOpened.value = false;
+
+    emit("save");
 };
 </script>
 
 <template>
-    <BaseModal v-model:is-opened="localIsOpened">
+    <BaseModal v-model:is-opened="localIsOpened" :loading="isLoading">
         <template #title> {{ title }} </template>
         <template #content>
             <NFormItem label="Название теста">
