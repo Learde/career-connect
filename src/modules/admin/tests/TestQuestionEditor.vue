@@ -1,15 +1,19 @@
 <script setup>
 import { computed, ref, watch } from "vue";
 
+import { IconDelete } from "@/shared";
+
 const props = defineProps({
     title: String,
     hasMultipleAnswers: Boolean,
+    hasDelete: Boolean,
     answers: Array,
 });
 const emit = defineEmits([
     "update:title",
     "update:hasMultipleAnswers",
     "update:answers",
+    "delete",
 ]);
 
 const questionTitle = computed({
@@ -70,12 +74,17 @@ const handleSelectCorrect = (value, answer) => {
 
 <template>
     <NForm>
-        <NFormItem label="Название вопроса" path="title">
-            <NInput
-                v-model:value="questionTitle"
-                placeholder="Введите название"
-            />
-        </NFormItem>
+        <div :class="classes.headingRow">
+            <NFormItem label="Название вопроса" path="title">
+                <NInput
+                    v-model:value="questionTitle"
+                    placeholder="Введите название"
+                />
+            </NFormItem>
+            <NButton v-if="hasDelete" type="default" secondary>
+                <IconDelete @click="$emit('delete')" />
+            </NButton>
+        </div>
         <NCheckbox
             :class="classes.checkbox"
             v-model:checked="questionHasMultipleAnswers"
@@ -120,6 +129,20 @@ const handleSelectCorrect = (value, answer) => {
     font-weight: 500;
 }
 
+.headingRow {
+    display: flex;
+
+    gap: 15px;
+
+    & > div {
+        width: 100%;
+    }
+
+    & > button {
+        margin-top: 26px;
+    }
+}
+
 .checkbox {
     margin-bottom: 24px;
 }
@@ -152,7 +175,7 @@ const handleSelectCorrect = (value, answer) => {
 .answer {
     display: flex;
 
-    gap: 30px;
+    gap: 15px;
 
     align-items: flex-start;
 }

@@ -47,6 +47,14 @@ const createQuestion = () => {
     questions.value.push(copyQuestion);
 };
 
+const deleteQuestion = (question) => {
+    const ind = questions.value.findIndex((q) => q === question);
+
+    if (ind >= 0) {
+        questions.value.splice(ind, 1);
+    }
+};
+
 // Create first question
 createQuestion();
 </script>
@@ -61,6 +69,8 @@ createQuestion();
                     v-model:title="question.title"
                     v-model:has-multiple-answers="question.hasMultipleAnswers"
                     v-model:answers="question.answers"
+                    :has-delete="questions.length > 1"
+                    @delete="deleteQuestion(question)"
                 />
             </template>
             <div :class="classes.questionAction">
