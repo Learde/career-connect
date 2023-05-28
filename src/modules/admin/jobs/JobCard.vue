@@ -82,8 +82,6 @@ const deleteJob = () => {
 
     justify-content: space-between;
 
-    margin-top: 10px;
-
     font-size: 16px;
     font-weight: 500;
 
@@ -114,6 +112,18 @@ const deleteJob = () => {
     svg {
         position: relative;
         top: 1px;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer {
+        button {
+            width: 50%;
+
+            span {
+                white-space: normal;
+            }
+        }
     }
 }
 </style>

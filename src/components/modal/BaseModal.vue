@@ -3,7 +3,10 @@ import { computed } from "vue";
 
 import { IconClose } from "@/shared";
 
-const props = defineProps({ isOpened: { type: Boolean, default: false } });
+const props = defineProps({
+    isOpened: { type: Boolean, default: false },
+    loading: { type: Boolean, default: false },
+});
 
 const emit = defineEmits(["update:isOpened"]);
 
@@ -20,16 +23,18 @@ const localIsOpened = computed({
 <template>
     <NModal v-model:show="localIsOpened">
         <div :class="classes.modalContent">
-            <div :class="classes.modalHeader">
-                <h2><slot name="title" /></h2>
-                <IconClose
-                    :class="classes.closeIcon"
-                    @click="localIsOpened = false"
-                />
-            </div>
-            <div>
-                <slot name="content" />
-            </div>
+            <NSpin :show="loading">
+                <div :class="classes.modalHeader">
+                    <h2><slot name="title" /></h2>
+                    <IconClose
+                        :class="classes.closeIcon"
+                        @click="localIsOpened = false"
+                    />
+                </div>
+                <div>
+                    <slot name="content" />
+                </div>
+            </NSpin>
         </div>
     </NModal>
 </template>

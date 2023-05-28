@@ -97,7 +97,7 @@ const changeJob = async () => {
 </script>
 
 <template>
-    <BaseModal v-model:is-opened="localIsOpened">
+    <BaseModal v-model:is-opened="localIsOpened" :loading="loading">
         <template #title> {{ title }} </template>
         <template #content>
             <JobEditor
@@ -109,11 +109,7 @@ const changeJob = async () => {
                 v-model:type="form.type"
             />
             <div :class="classes.actions" class="actions">
-                <div v-if="loading">
-                    <NSpin size="small" />
-                </div>
                 <NButton
-                    v-else
                     type="primary"
                     :disabled="loading"
                     @click="isNil(job) ? addJob() : changeJob()"
