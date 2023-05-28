@@ -21,20 +21,7 @@ const options2 = [
         key: "1",
         children: [
             {
-                label: "Мы предоставляем возможность проведения проверочных тестов для кандидатов прямо на платформе.  Результаты тестирования помогают нам более точно оценить навыки и компетенции кандидатов.",
-                key: "1",
-            },
-        ],
-    },
-];
-
-const options3 = [
-    {
-        label: "Как скоро со мной свяжутся?",
-        key: "1",
-        children: [
-            {
-                label: "С вами свяжутся как только наши специалисты ознакомятся с вашим резюме и тестами. Вы можете отслеживать ваш статус в личном кабинете.",
+                label: "Мы предоставляем возможность проведения проверочных тестов для кандидатов прямо на платформе.  Результаты тестирования помогают нам более точно оценить навыки и компетенции.",
                 key: "1",
             },
         ],
@@ -97,14 +84,6 @@ const options3 = [
             accordion
             :value="null"
         />
-
-        <NMenu
-            :class="classes.accordion"
-            class="accordion"
-            :options="options3"
-            accordion
-            :value="null"
-        />
     </main>
 </template>
 
@@ -136,9 +115,9 @@ const options3 = [
 .iconBlock {
     position: relative;
 
-    width: 300px;
+    width: 200px;
 
-    height: 350px;
+    height: 250px;
 }
 
 .mainIcon {
@@ -148,13 +127,13 @@ const options3 = [
 }
 
 .mainIconCase {
-    top: 70px;
-    left: 130px;
+    top: 40px;
+    left: 80px;
 }
 
 .mainIconMarkTabs {
-    top: 145px;
-    left: 55px;
+    top: 115px;
+    left: 25px;
 }
 
 .mainText {
