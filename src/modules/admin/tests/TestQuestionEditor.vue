@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 
 const props = defineProps({
     title: String,
@@ -50,6 +50,22 @@ const createAnswer = () => {
 
     questionAnswers.value.push(copyAnswer);
 };
+
+const clearRightAnswers = () => {
+    if (!questionHasMultipleAnswers.value) {
+        questionAnswers.value.forEach((x) => (x.isCorrect = false));
+    }
+};
+
+watch(questionHasMultipleAnswers, () => {
+    clearRightAnswers();
+});
+
+const handleSelectCorrect = (value, answer) => {
+    clearRightAnswers();
+
+    answer.isCorrect = value;
+};
 </script>
 
 <template>
@@ -81,7 +97,8 @@ const createAnswer = () => {
                 </NFormItem>
                 <NCheckbox
                     :class="classes.rightCheckbox"
-                    v-model:checked="answer.isCorrect"
+                    :checked="answer.isCorrect"
+                    @update:checked="(v) => handleSelectCorrect(v, answer)"
                 >
                     Верный
                 </NCheckbox>
