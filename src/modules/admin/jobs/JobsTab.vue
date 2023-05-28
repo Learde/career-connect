@@ -87,6 +87,11 @@ onMounted(async () => {
     grid-template-columns: 1fr 1fr;
 
     gap: var(--list-gap);
+
+    max-height: 60vh;
+    padding: 10px;
+
+    overflow: auto;
 }
 
 @media (max-width: 900px) {
