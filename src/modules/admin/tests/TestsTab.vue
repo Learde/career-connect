@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 
 import { ListHeader } from "@/components";
-import { getTests } from "@/shared";
+import { getTests, deleteTest as apiDeleteTest } from "@/shared";
 
 import TestCard from "./TestCard.vue";
 import TestModal from "./TestModal.vue";
@@ -39,6 +39,12 @@ const reloadList = async () => {
     isLoading.value = false;
 };
 
+const deleteTest = async (id) => {
+    isLoading.value = true;
+    await apiDeleteTest(id);
+    reloadList();
+};
+
 onMounted(() => {
     reloadList();
 });
@@ -57,6 +63,7 @@ onMounted(() => {
                 :key="test.id"
                 :test="test"
                 @edit="openModal(test)"
+                @delete="deleteTest(test.id)"
                 @click="openViewModal(test)"
             />
         </template>
