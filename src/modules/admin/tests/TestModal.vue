@@ -1,8 +1,8 @@
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, onMounted } from "vue";
 
 import { BaseModal } from "@/components";
-import { isNil } from "@/shared";
+import { isNil, createTest } from "@/shared";
 
 import TestQuestionEditor from "./TestQuestionEditor.vue";
 
@@ -32,12 +32,13 @@ const title = computed(() => {
 const questionId = ref(1);
 const questionPattern = {
     id: 1,
-    title: "",
+    data: "",
     hasMultipleAnswers: false,
-    answers: [{ id: 1, title: "", isCorrect: false }],
+    answers: [{ id: 1, data: "", isCorrect: false }],
 };
 
 const questions = ref([]);
+const testTitle = ref("");
 
 const createQuestion = () => {
     const copyQuestion = JSON.parse(JSON.stringify(questionPattern));
@@ -55,30 +56,51 @@ const deleteQuestion = (question) => {
     }
 };
 
-// Create first question
-createQuestion();
+onMounted(() => {
+    // Create first question
+    createQuestion();
+});
+
+// api
+const saveTest = () => {
+    const test = {
+        name: testTitle.value,
+        questions: questions.value,
+    };
+
+    createTest(test);
+};
 </script>
 
 <template>
     <BaseModal v-model:is-opened="localIsOpened">
         <template #title> {{ title }} </template>
         <template #content>
+            <NFormItem label="Название теста">
+                <NInput
+                    v-model:value="testTitle"
+                    placeholder="Введите название"
+                />
+            </NFormItem>
+
             <template v-for="(question, index) in questions" :key="question.id">
                 <NDivider> Вопрос #{{ index + 1 }} </NDivider>
                 <TestQuestionEditor
-                    v-model:title="question.title"
+                    v-model:title="question.data"
                     v-model:has-multiple-answers="question.hasMultipleAnswers"
                     v-model:answers="question.answers"
                     :has-delete="questions.length > 1"
                     @delete="deleteQuestion(question)"
                 />
             </template>
+
             <div :class="classes.questionAction">
                 <NButton type="primary" @click="createQuestion">
                     Добавить вопрос
                 </NButton>
             </div>
-            <div :class="classes.actions">
+
+            <div :class="classes.actions" @click="saveTest">
                 <NButton type="primary">Сохранить</NButton>
             </div>
         </template>

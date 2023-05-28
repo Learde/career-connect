@@ -44,7 +44,7 @@ const questionAnswers = computed({
 });
 
 // answers
-const answerPattern = { title: "", isCorrect: false };
+const answerPattern = { data: "", isCorrect: false };
 const answerId = ref(2);
 
 const createAnswer = () => {
@@ -113,7 +113,7 @@ const handleSelectCorrect = (value, answer) => {
             >
                 <NFormItem label="Текст ответа" :class="classes.answerInput">
                     <NInput
-                        v-model:value="answer.title"
+                        v-model:value="answer.data"
                         placeholder="Введите текст"
                     />
                 </NFormItem>
