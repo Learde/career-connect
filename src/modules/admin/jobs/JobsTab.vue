@@ -1,6 +1,6 @@
 <script setup>
 import { storeToRefs } from "pinia";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 
 import { ListHeader } from "@/components";
 import { deleteJob, closeJob } from "@/shared";
@@ -17,6 +17,16 @@ const modal = ref({
 const store = useJobsStore();
 
 const { jobsList, listLoading } = storeToRefs(store);
+
+const search = ref("");
+
+const filteredJobs = computed(() => {
+    if (!search.value) return jobsList.value;
+
+    return jobsList.value.filter(({ name }) =>
+        name.toLowerCase().includes(search.value.toLowerCase())
+    );
+});
 
 const openCreate = () => {
     modal.value = {
@@ -48,7 +58,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <ListHeader @create="openCreate">
+    <ListHeader v-model:search="search" @create="openCreate">
         <template #button-text> Создать вакансию </template>
     </ListHeader>
     <div v-if="listLoading" :class="classes.loading">
@@ -56,7 +66,7 @@ onMounted(async () => {
     </div>
     <div v-else :class="classes.list">
         <JobCard
-            v-for="job in jobsList"
+            v-for="job in filteredJobs"
             :key="job.id"
             :job="job"
             @change="(val) => (modal = { open: true, job: val })"
