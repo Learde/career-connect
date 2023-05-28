@@ -36,4 +36,10 @@ import { BaseBox } from "@/shared";
     min-height: calc(100vh - var(--header-height) - var(--padding-y) * 2);
     padding: 30px 80px;
 }
+
+@media (max-width: 850px) {
+    .mainBox {
+        padding: 20px;
+    }
+}
 </style>

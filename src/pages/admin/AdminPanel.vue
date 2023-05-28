@@ -2,6 +2,8 @@
 import { ref, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
+import { TheMainAdmin } from "@/modules";
+
 const router = useRouter();
 const currentRoute = useRoute();
 
@@ -43,24 +45,26 @@ watch(currentTab, (value) => {
 </script>
 
 <template>
-    <NTabs
-        type="line"
-        justify-content="center"
-        defa
-        animated
-        :pane-wrapper-class="classes.tabsWrapper"
-        :value="currentTab"
-        :on-update:value="(val) => (currentTab = val)"
-    >
-        <NTabPane
-            v-for="tab in tabs"
-            :key="tab.name"
-            :name="tab.name"
-            :tab="tab.tab"
+    <TheMainAdmin>
+        <NTabs
+            type="line"
+            justify-content="center"
+            defa
+            animated
+            :pane-wrapper-class="classes.tabsWrapper"
+            :value="currentTab"
+            :on-update:value="(val) => (currentTab = val)"
         >
-            <RouterView></RouterView>
-        </NTabPane>
-    </NTabs>
+            <NTabPane
+                v-for="tab in tabs"
+                :key="tab.name"
+                :name="tab.name"
+                :tab="tab.tab"
+            >
+                <RouterView></RouterView>
+            </NTabPane>
+        </NTabs>
+    </TheMainAdmin>
 </template>
 
 <style module="classes">

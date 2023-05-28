@@ -1,23 +1,73 @@
 <script setup>
+import { computed } from "vue";
+
 import { ListCard } from "@/components";
 import { IconRubble } from "@/shared";
+
+const props = defineProps({
+    job: Object,
+});
+
+const emit = defineEmits(["change", "delete", "close"]);
+
+const salaryText = computed(() => {
+    const job = props.job;
+
+    if (job.maxSalary && job.minSalary) {
+        return `${job.minSalary} - ${job.maxSalary}`;
+    }
+
+    if (job.minSalary && !job.maxSalary) {
+        return `От ${job.minSalary}`;
+    }
+
+    if (job.maxSalary && !job.minSalary) {
+        return `До ${job.maxSalary}`;
+    }
+
+    return "";
+});
+
+const changeJob = () => {
+    emit("change", props.job);
+};
+
+const closeJob = () => {
+    emit("close", props.job.id);
+};
+
+const deleteJob = () => {
+    emit("delete", props.job.id);
+};
 </script>
 
 <template>
-    <ListCard has-close has-delete has-edit>
-        <template #title> Python-разработчик </template>
+    <ListCard
+        has-close
+        has-delete
+        has-edit
+        @edit="changeJob"
+        @close="closeJob"
+        @delete="deleteJob"
+    >
+        <template #title> {{ job.name }} </template>
         <template #content>
             <div :class="classes.content">
-                <span>Middle</span>
-                <span>Python</span>
-                <span>Django</span>
+                <span v-for="(tag, idx) in job.tags" :key="idx"
+                    >{{ tag }}
+                </span>
             </div>
         </template>
         <template #footer>
             <div :class="classes.footer">
                 <NButton type="info"> Откликнувшиеся кандидаты </NButton>
-                <div :class="classes.salary">
-                    <span>100000-100001</span><IconRubble :size="18" />
+                <div
+                    v-if="job.maxSalary || job.minSalary"
+                    :class="classes.salary"
+                >
+                    <span>{{ salaryText }} </span>
+
+                    <IconRubble :size="18" />
                 </div>
             </div>
         </template>
