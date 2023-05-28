@@ -14,6 +14,8 @@ const props = defineProps({
 // v-model
 const emit = defineEmits(["update:isOpened", "changeJob"]);
 
+const loading = ref(false);
+
 const localIsOpened = computed({
     get() {
         return props.isOpened;
@@ -56,6 +58,7 @@ watch(localIsOpened, (val) => {
 const addJob = async () => {
     const model = form.value;
 
+    loading.value = true;
     await createJob({
         name: model.title,
         description: model.description,
@@ -68,10 +71,13 @@ const addJob = async () => {
         users: [],
     });
     emit("changeJob");
+    loading.value = false;
 };
 
 const changeJob = async () => {
     const model = form.value;
+
+    loading.value = true;
 
     await editJob(props.job.id, {
         name: model.title,
@@ -86,6 +92,7 @@ const changeJob = async () => {
     });
 
     emit("changeJob");
+    loading.value = false;
 };
 </script>
 
@@ -101,12 +108,17 @@ const changeJob = async () => {
                 v-model:tags="form.tags"
                 v-model:type="form.type"
             />
-            <div :class="classes.actions">
+            <div :class="classes.actions" class="actions">
+                <div v-if="loading">
+                    <NSpin size="small" />
+                </div>
                 <NButton
+                    v-else
                     type="primary"
+                    :disabled="loading"
                     @click="isNil(job) ? addJob() : changeJob()"
                 >
-                    Сохранить
+                    <span> Сохранить </span>
                 </NButton>
             </div>
         </template>

@@ -16,7 +16,7 @@ const modal = ref({
 
 const store = useJobsStore();
 
-const { jobsList } = storeToRefs(store);
+const { jobsList, listLoading } = storeToRefs(store);
 
 const openCreate = () => {
     modal.value = {
@@ -51,7 +51,10 @@ onMounted(async () => {
     <ListHeader @create="openCreate">
         <template #button-text> Создать вакансию </template>
     </ListHeader>
-    <div :class="classes.list">
+    <div v-if="listLoading" :class="classes.loading">
+        <NSpin size="large" />
+    </div>
+    <div v-else :class="classes.list">
         <JobCard
             v-for="job in jobsList"
             :key="job.id"
@@ -69,6 +72,15 @@ onMounted(async () => {
 </template>
 
 <style module="classes">
+.loading {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10vh;
+}
+
 .list {
     display: grid;
 
@@ -77,7 +89,7 @@ onMounted(async () => {
     gap: var(--list-gap);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     .list {
         grid-template-columns: 1fr;
     }
