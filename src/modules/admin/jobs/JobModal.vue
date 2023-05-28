@@ -1,8 +1,8 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 
 import { BaseModal } from "@/components";
-import { isNil } from "@/shared";
+import { isNil, createJob, editJob } from "@/shared";
 
 import JobEditor from "./JobEditor.vue";
 
@@ -12,7 +12,7 @@ const props = defineProps({
 });
 
 // v-model
-const emit = defineEmits(["update:isOpened"]);
+const emit = defineEmits(["update:isOpened", "changeJob"]);
 
 const localIsOpened = computed({
     get() {
@@ -29,13 +29,64 @@ const title = computed(() => {
 });
 
 // job logic
-const form = ref({
-    title: "",
-    description: "",
-    salaryMin: null,
-    salaryMax: null,
-    tags: [],
+const form = ref({});
+
+watch(localIsOpened, (val) => {
+    if (val) {
+        form.value = {
+            title: props.job?.name ?? "",
+            description: props.job?.description ?? "",
+            salaryMin: props.job?.minSalary ?? null,
+            salaryMax: props.job?.maxSalary ?? null,
+            type: props.job?.type ?? "VACANCY",
+            tags: props.job?.tags ?? [],
+        };
+    } else {
+        form.value = {
+            title: "",
+            description: "",
+            salaryMin: null,
+            salaryMax: null,
+            type: "VACANCY",
+            tags: [],
+        };
+    }
 });
+
+const addJob = async () => {
+    const model = form.value;
+
+    await createJob({
+        name: model.title,
+        description: model.description,
+        type: model.type,
+        isOpen: true,
+        minSalary: model.salaryMin,
+        maxSalary: model.salaryMax,
+        tests: [],
+        tags: model.tags,
+        users: [],
+    });
+    emit("changeJob");
+};
+
+const changeJob = async () => {
+    const model = form.value;
+
+    await editJob(props.job.id, {
+        name: model.title,
+        description: model.description,
+        type: model.type,
+        isOpen: true,
+        minSalary: model.salaryMin,
+        maxSalary: model.salaryMax,
+        tests: [],
+        tags: model.tags,
+        users: [],
+    });
+
+    emit("changeJob");
+};
 </script>
 
 <template>
@@ -48,9 +99,15 @@ const form = ref({
                 v-model:salary-min="form.salaryMin"
                 v-model:salary-max="form.salaryMax"
                 v-model:tags="form.tags"
+                v-model:type="form.type"
             />
             <div :class="classes.actions">
-                <NButton type="primary">Сохранить</NButton>
+                <NButton
+                    type="primary"
+                    @click="isNil(job) ? addJob() : changeJob()"
+                >
+                    Сохранить
+                </NButton>
             </div>
         </template>
     </BaseModal>

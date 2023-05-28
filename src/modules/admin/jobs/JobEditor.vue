@@ -10,6 +10,7 @@ const props = defineProps({
     salaryMax: Number,
     salary: Boolean,
     tags: Array,
+    type: String,
 });
 const emit = defineEmits([
     "update:title",
@@ -17,6 +18,7 @@ const emit = defineEmits([
     "update:salaryMin",
     "update:salaryMax",
     "update:tags",
+    "update:type",
 ]);
 
 const jobTitle = computed({
@@ -64,6 +66,15 @@ const jobTags = computed({
     },
 });
 
+const jobType = computed({
+    get() {
+        return props.type;
+    },
+    set(v) {
+        emit("update:type", v);
+    },
+});
+
 const editorConfig = ref({
     toolbar: {
         items: [
@@ -107,6 +118,24 @@ const editorConfig = ref({
         <NFormItem label="Заголовок" path="title">
             <NInput v-model:value="jobTitle" placeholder="Введите название" />
         </NFormItem>
+        <div :class="classes.radios">
+            <NRadio
+                :checked="jobType === 'VACANCY'"
+                value="VACANCY"
+                name="Вакансия"
+                @change="(val) => (jobType = val)"
+            >
+                Вакансия
+            </NRadio>
+            <NRadio
+                :checked="jobType === 'Be Here Now'"
+                value="INTERNSHIP"
+                name="Стажировка"
+                @change="(val) => (jobType = val)"
+            >
+                Стажировка
+            </NRadio>
+        </div>
         <NFormItem label="Зарплата">
             <div :class="classes.salary">
                 <NInputNumber
@@ -151,5 +180,9 @@ const editorConfig = ref({
     display: inline-block;
 
     margin: 0 0 8px 2px;
+}
+
+.radios {
+    margin: 0 0 15px;
 }
 </style>
