@@ -41,12 +41,14 @@ const changeJob = () => {
 };
 
 const close = async (id) => {
+    listLoading.value = true;
     await closeJob(id);
 
     store.fetchJobs();
 };
 
 const removeJob = async (id) => {
+    listLoading.value = true;
     await deleteJob(id);
 
     store.fetchJobs();
@@ -61,10 +63,10 @@ onMounted(async () => {
     <ListHeader v-model:search="search" @create="openCreate">
         <template #button-text> Создать вакансию </template>
     </ListHeader>
-    <div v-if="listLoading" :class="classes.loading">
+    <div v-if="listLoading" :class="classes.center">
         <NSpin size="large" />
     </div>
-    <div v-else :class="classes.list">
+    <div v-if="!listLoading && jobsList.length" :class="classes.list">
         <JobCard
             v-for="job in filteredJobs"
             :key="job.id"
@@ -74,6 +76,9 @@ onMounted(async () => {
             @delete="(val) => removeJob(val)"
         />
     </div>
+    <div v-if="!listLoading && !jobsList.length" :class="classes.center">
+        <h3>Нет открытых вакансий</h3>
+    </div>
     <JobModal
         v-model:is-opened="modal.open"
         :job="modal.job"
@@ -81,8 +86,8 @@ onMounted(async () => {
     />
 </template>
 
-<style module="classes">
-.loading {
+<style module="classes" lang="scss">
+.center {
     display: flex;
 
     align-items: center;

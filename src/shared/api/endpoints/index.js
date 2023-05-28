@@ -10,3 +10,7 @@ export { createTest } from "./tests/createTest";
 export { getTests } from "./tests/getTests";
 export { editTest } from "./tests/editTest";
 export { deleteTest } from "./tests/deleteTest";
+
+// profile
+export { getProfile } from "./user/getProfile";
+export { changeProfile } from "./user/changeProfile";

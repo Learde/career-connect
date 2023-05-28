@@ -43,6 +43,10 @@ defineEmits(["edit", "close", "delete", "click"]);
 
 <style lang="scss" module="classes">
 .card {
+    display: flex;
+
+    flex-direction: column;
+
     width: 100%;
     min-height: 105px;
     padding: 12px 35px;
@@ -86,5 +90,9 @@ defineEmits(["edit", "close", "delete", "click"]);
     margin-bottom: 20px;
 
     font-size: 15px;
+}
+
+.footer {
+    margin-top: auto;
 }
 </style>
