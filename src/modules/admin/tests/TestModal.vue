@@ -12,7 +12,7 @@ const props = defineProps({
 });
 
 // v-model
-const emit = defineEmits(["update:isOpened", "save"]);
+const emit = defineEmits(["update:isOpened", "save", "closed"]);
 
 const localIsOpened = computed({
     get() {
@@ -57,6 +57,9 @@ const deleteQuestion = (question) => {
 };
 
 watch(localIsOpened, () => {
+    questions.value = [];
+    testTitle.value = "";
+
     if (props.test === null) {
         // Create first question
         createQuestion();
@@ -86,7 +89,11 @@ const saveTest = async () => {
 </script>
 
 <template>
-    <BaseModal v-model:is-opened="localIsOpened" :loading="isLoading">
+    <BaseModal
+        v-model:is-opened="localIsOpened"
+        :loading="isLoading"
+        @closed="$emit('closed')"
+    >
         <template #title> {{ title }} </template>
         <template #content>
             <NFormItem label="Название теста">

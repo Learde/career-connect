@@ -5,7 +5,7 @@ import { IconClose } from "@/shared";
 
 const props = defineProps({ isOpened: { type: Boolean, default: false } });
 
-const emit = defineEmits(["update:isOpened"]);
+const emit = defineEmits(["update:isOpened", "closed"]);
 
 const localIsOpened = computed({
     get() {
@@ -18,7 +18,7 @@ const localIsOpened = computed({
 </script>
 
 <template>
-    <NModal v-model:show="localIsOpened">
+    <NModal v-model:show="localIsOpened" :on-after-leave="$emit('closed')">
         <div :class="classes.modalContent">
             <div :class="classes.modalHeader">
                 <h2><slot name="title" /></h2>

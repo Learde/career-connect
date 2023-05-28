@@ -21,6 +21,13 @@ const openViewModal = (test) => {
     isViewModalOpened.value = true;
 };
 
+const clearPickedTest = () => {
+    if (!isModalOpened.value && !isViewModalOpened.value)
+        setTimeout(() => {
+            pickedTest.value = null;
+        }, 200);
+};
+
 const reloadList = async () => {
     isLoading.value = true;
     tests.value = await getTests();
@@ -49,8 +56,17 @@ onMounted(() => {
         </template>
     </div>
 
-    <TestModal v-model:is-opened="isModalOpened" @save="reloadList" />
-    <TestViewModal :test="pickedTest" v-model:is-opened="isViewModalOpened" />
+    <TestModal
+        :test="pickedTest"
+        v-model:is-opened="isModalOpened"
+        @save="reloadList"
+        @closed="clearPickedTest"
+    />
+    <TestViewModal
+        :test="pickedTest"
+        v-model:is-opened="isViewModalOpened"
+        @closed="clearPickedTest"
+    />
 </template>
 
 <style module="classes">

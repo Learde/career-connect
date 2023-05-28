@@ -10,7 +10,7 @@ const props = defineProps({
     isOpened: { type: Boolean, default: false },
 });
 
-const emit = defineEmits(["update:isOpened"]);
+const emit = defineEmits(["update:isOpened", "closed"]);
 
 const localIsOpened = computed({
     get() {
@@ -23,13 +23,13 @@ const localIsOpened = computed({
 </script>
 
 <template>
-    <BaseModal v-model:is-opened="localIsOpened">
+    <BaseModal v-model:is-opened="localIsOpened" @closed="$emit('closed')">
         <template #title>
-            {{ test.name }}
+            {{ test?.name }}
         </template>
         <template #content>
             <QuestionView
-                v-for="(question, index) in test.questions"
+                v-for="(question, index) in test?.questions"
                 :key="question.id"
                 :question="question"
                 :number="index + 1"
