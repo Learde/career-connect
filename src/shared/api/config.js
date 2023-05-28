@@ -7,7 +7,7 @@ const BASE_URL = window.BASE_URL ?? "http://51.250.105.58/api/";
 
 // Variables
 let token =
-    "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJMZWFyZGUiLCJpYXQiOjE2ODUyODAwODMsImV4cCI6MTY4NTI4MTUyM30.AOKi4bgrQcrvG78peWEDsKQ_3kJefOsPQi21bEXnCL4";
+    "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJMZWFyZGUiLCJpYXQiOjE2ODUyODc4NDQsImV4cCI6MTY4NTM3NDI0NH0.zSxeA0o7ADXccTtZ_Q44bwsyrwQfJvGc1pq5HtXg8oQ";
 let handleResponseFulfilled = null;
 let handleResponseRejected = null;
 

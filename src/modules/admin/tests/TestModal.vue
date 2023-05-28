@@ -2,7 +2,7 @@
 import { computed, ref, watch } from "vue";
 
 import { BaseModal } from "@/components";
-import { isNil, createTest } from "@/shared";
+import { isNil, createTest, editTest } from "@/shared";
 
 import TestQuestionEditor from "./TestQuestionEditor.vue";
 
@@ -79,7 +79,8 @@ const saveTest = async () => {
 
     isLoading.value = true;
 
-    if (props.test === null) await createTest(test);
+    if (props.test === null || props.test.id === null) await createTest(test);
+    else await editTest(test, props.test.id);
 
     isLoading.value = false;
     localIsOpened.value = false;

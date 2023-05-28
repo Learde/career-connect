@@ -8,3 +8,4 @@ export { closeJob } from "./jobs/closeJob";
 // tests
 export { createTest } from "./tests/createTest";
 export { getTests } from "./tests/getTests";
+export { editTest } from "./tests/editTest";

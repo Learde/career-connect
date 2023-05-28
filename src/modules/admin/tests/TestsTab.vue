@@ -21,6 +21,11 @@ const openViewModal = (test) => {
     isViewModalOpened.value = true;
 };
 
+const openModal = (test) => {
+    pickedTest.value = test;
+    isModalOpened.value = true;
+};
+
 const clearPickedTest = () => {
     if (!isModalOpened.value && !isViewModalOpened.value)
         setTimeout(() => {
@@ -51,6 +56,7 @@ onMounted(() => {
                 v-for="test in tests"
                 :key="test.id"
                 :test="test"
+                @edit="openModal(test)"
                 @click="openViewModal(test)"
             />
         </template>
